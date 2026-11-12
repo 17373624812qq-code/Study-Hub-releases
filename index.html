@@ -10,6 +10,9 @@
 <meta property="og:image" content="https://17373624812qq-code.github.io/Study-Hub-releases/img/home-zh.jpg">
 <link rel="icon" href="img/icon.svg" type="image/svg+xml">
 <link rel="alternate" type="text/plain" href="llms.txt" title="Plain-text summary for agents">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&display=swap">
 <link rel="stylesheet" href="style.css">
 <script>
   // Pick the language before first paint: saved choice, else the browser's.
@@ -33,54 +36,74 @@
 </script>
 </head>
 <body>
+<div class="top">
 <header class="wrap bar">
   <a class="brand" href="./"><img src="img/icon.svg" alt="">Study Hub</a>
   <button class="link" type="button" data-lang-toggle><span lang="zh-CN">English</span><span lang="en">中文</span></button>
 </header>
 
-<main class="wrap">
-  <section class="hero">
-    <h1>Study Hub</h1>
-    <p><span lang="zh-CN">Canvas 的截止日期、成绩和复习，放在一个 App 里。</span><span lang="en">Canvas deadlines, grades and revision in one app.</span></p>
+<main>
+  <section class="wrap hero">
+    <div>
+      <h1>Study Hub</h1>
+      <p><span lang="zh-CN">Canvas 的截止日期、成绩和复习，放在一个 App 里。</span><span lang="en">Canvas deadlines, grades and revision in one app.</span></p>
 
-    <div class="get" id="download">
-      <a class="button" data-os="mac" href="https://github.com/17373624812qq-code/Study-Hub-releases/releases/latest/download/StudyHub-Mac-AppleSilicon.dmg"><span lang="zh-CN">下载 Mac 版</span><span lang="en">Download for Mac</span></a>
-      <nav class="others">
-        <a data-os="win" href="https://github.com/17373624812qq-code/Study-Hub-releases/releases/latest/download/StudyHub-Windows-Setup.exe">Windows</a>
-        <a data-os="mac" href="https://github.com/17373624812qq-code/Study-Hub-releases/releases/latest/download/StudyHub-Mac-Intel.dmg">Mac Intel</a>
-        <a href="https://github.com/17373624812qq-code/Study-Hub-releases/releases"><span lang="zh-CN">所有版本</span><span lang="en">All versions</span></a>
-      </nav>
+      <div class="get" id="download">
+        <a class="button" data-os="mac" href="https://github.com/17373624812qq-code/Study-Hub-releases/releases/latest/download/StudyHub-Mac-AppleSilicon.dmg"><span lang="zh-CN">下载 Mac 版</span><span lang="en">Download for Mac</span></a>
+        <nav class="others">
+          <a data-os="win" href="https://github.com/17373624812qq-code/Study-Hub-releases/releases/latest/download/StudyHub-Windows-Setup.exe">Windows</a>
+          <a data-os="mac" href="https://github.com/17373624812qq-code/Study-Hub-releases/releases/latest/download/StudyHub-Mac-Intel.dmg">Mac Intel</a>
+          <a href="https://github.com/17373624812qq-code/Study-Hub-releases/releases"><span lang="zh-CN">所有版本</span><span lang="en">All versions</span></a>
+        </nav>
+      </div>
+
+      <ol class="steps mac" aria-live="polite">
+        <li><span lang="zh-CN">打开下载的 .dmg，把 Study Hub 拖进「应用程序」</span><span lang="en">Open the .dmg and drag Study Hub into Applications</span></li>
+        <li><span lang="zh-CN">第一次打开：右键 Study Hub →「打开」</span><span lang="en">First launch: right-click Study Hub → Open</span></li>
+        <li><span lang="zh-CN">没有 Canvas 账号也能先试「演示」</span><span lang="en">No Canvas account? Try the demo</span></li>
+      </ol>
+      <ol class="steps win" aria-live="polite">
+        <li><span lang="zh-CN">打开 StudyHub-Windows-Setup.exe</span><span lang="en">Open StudyHub-Windows-Setup.exe</span></li>
+        <li><span lang="zh-CN">出现蓝色提示时：「更多信息」→「仍要运行」</span><span lang="en">If a blue warning appears: More info → Run anyway</span></li>
+        <li><span lang="zh-CN">没有 Canvas 账号也能先试「演示」</span><span lang="en">No Canvas account? Try the demo</span></li>
+      </ol>
     </div>
 
-    <ol class="steps mac" aria-live="polite">
-      <li><span lang="zh-CN">打开下载的 .dmg，把 Study Hub 拖进「应用程序」</span><span lang="en">Open the .dmg and drag Study Hub into Applications</span></li>
-      <li><span lang="zh-CN">第一次打开：右键 Study Hub →「打开」</span><span lang="en">First launch: right-click Study Hub → Open</span></li>
-      <li><span lang="zh-CN">没有 Canvas 账号也能先试「演示」</span><span lang="en">No Canvas account? Try the demo</span></li>
-    </ol>
-    <ol class="steps win" aria-live="polite">
-      <li><span lang="zh-CN">打开 StudyHub-Windows-Setup.exe</span><span lang="en">Open StudyHub-Windows-Setup.exe</span></li>
-      <li><span lang="zh-CN">出现蓝色提示时：「更多信息」→「仍要运行」</span><span lang="en">If a blue warning appears: More info → Run anyway</span></li>
-      <li><span lang="zh-CN">没有 Canvas 账号也能先试「演示」</span><span lang="en">No Canvas account? Try the demo</span></li>
-    </ol>
-
-    <img class="shot" src="img/home-zh.jpg" data-en="img/home-en.jpg" width="1280" height="800" alt="Study Hub: upcoming deadlines with a countdown">
-  </section>
-
-  <section class="feature">
-    <h2><span lang="zh-CN">成绩</span><span lang="en">Grades</span></h2>
-    <img class="shot" src="img/grades-zh.jpg" data-en="img/grades-en.jpg" width="1280" height="800" loading="lazy" alt="Grade calculator: weighted mark and the average needed for each grade band">
-  </section>
-
-  <section class="feature">
-    <h2><span lang="zh-CN">AI 复习</span><span lang="en">AI review</span></h2>
-    <img class="shot" src="img/ai-zh.jpg" data-en="img/ai-en.jpg" width="1280" height="800" loading="lazy" alt="AI review: practice questions and flashcards from course material">
-  </section>
-
-  <section class="feature">
-    <h2><span lang="zh-CN">日历</span><span lang="en">Calendar</span></h2>
-    <img class="shot" src="img/calendar-zh.jpg" data-en="img/calendar-en.jpg" width="1280" height="800" loading="lazy" alt="Calendar of assessments and exams, exportable to phone calendars">
+    <figure class="due" aria-label="Example: countdown to the next exam" style="margin:0">
+      <div class="due-next">
+        <div class="due-tag"><span lang="zh-CN">下一场考试</span><span lang="en">Next exam</span></div>
+        <div class="due-course">FIN210 · <span lang="zh-CN">占总分 50% · 从公告识别</span><span lang="en">50% of grade · found in an announcement</span></div>
+        <div class="due-title">Final Exam</div>
+        <div class="clock" data-clock><span data-d>06</span><small lang="zh-CN">天</small><small lang="en">d</small><span data-h>11</span><small lang="zh-CN">时</small><small lang="en">h</small><span data-m>32</span><small lang="zh-CN">分</small><small lang="en">m</small><span data-s>08</span><small lang="zh-CN">秒</small><small lang="en">s</small></div>
+      </div>
+      <ul class="list">
+        <li><b>Quiz 3: CAPM</b><time>21:00</time><span>FIN210 · <span lang="zh-CN">明天</span><span lang="en">Tomorrow</span></span></li>
+        <li style="--c:#12a594"><b>Lab 4: ARIMA models</b><time>18:00</time><span>STA230 · <span lang="zh-CN">周六</span><span lang="en">Saturday</span></span></li>
+        <li style="--c:#d97706"><b>Peer Review Reflection</b><time>12:00</time><span>WRT110 · <span lang="zh-CN">周日</span><span lang="en">Sunday</span></span></li>
+      </ul>
+    </figure>
   </section>
 </main>
+</div>
+
+<div class="wrap">
+  <div class="window"><img src="img/home-zh.jpg" data-en="img/home-en.jpg" width="1280" height="800" alt="Study Hub home: upcoming deadlines with a countdown"></div>
+
+  <section class="tiles">
+    <article class="tile ai">
+      <h2><span lang="zh-CN">按课件出题</span><span lang="en">Quiz yourself on the slides</span></h2>
+      <div class="crop" style="--x:300;--y:235;--w:610;--h:335"><img src="img/ai-zh.jpg" data-en="img/ai-en.jpg" width="1280" height="800" loading="lazy" alt="AI review: a practice question in English with a Chinese translation"></div>
+    </article>
+    <article class="tile grades">
+      <h2><span lang="zh-CN">还差几分</span><span lang="en">What you still need</span></h2>
+      <div class="crop" style="--x:865;--y:112;--w:405;--h:320"><img src="img/grades-zh.jpg" data-en="img/grades-en.jpg" width="1280" height="800" loading="lazy" alt="Grade calculator: average needed for HD, D, CR and P"></div>
+    </article>
+    <article class="tile cal">
+      <h2><span lang="zh-CN">整个学期一眼看完</span><span lang="en">The whole semester at a glance</span></h2>
+      <div class="crop" style="--x:285;--y:560;--w:990;--h:235"><img src="img/calendar-zh.jpg" data-en="img/calendar-en.jpg" width="1280" height="800" loading="lazy" alt="Calendar with assessments and exams"></div>
+    </article>
+  </section>
+</div>
 
 <footer class="wrap foot">
   <a href="privacy.html"><span lang="zh-CN">隐私</span><span lang="en">Privacy</span></a>
@@ -116,6 +139,17 @@
     primary.innerHTML = '<span lang="zh-CN">下载 Windows 版</span><span lang="en">Download for Windows</span>';
     win.textContent = "Mac";
   }
+  // The example card counts down for real.
+  const end = Date.now() + (((6 * 24 + 11) * 60 + 32) * 60 + 8) * 1000;
+  const el = k => document.querySelector(`[data-${k}]`);
+  const pad = n => String(n).padStart(2, "0");
+  const tick = () => {
+    const t = Math.max(0, Math.round((end - Date.now()) / 1000));
+    el("d").textContent = pad(Math.floor(t / 86400)); el("h").textContent = pad(Math.floor(t / 3600) % 24);
+    el("m").textContent = pad(Math.floor(t / 60) % 60); el("s").textContent = pad(t % 60);
+  };
+  tick(); setInterval(tick, 1000);
+
   // Once a download starts, show how to open it instead of the buttons.
   for (const a of document.querySelectorAll("a[data-os]")) {
     a.addEventListener("click", () => { document.body.dataset.started = a.dataset.os; });
