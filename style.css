@@ -59,13 +59,13 @@ body[data-started] .get { display: none; }
 body[data-started="mac"] .steps.mac, body[data-started="win"] .steps.win { display: block; }
 
 /* The live card mirrors the app's home screen. */
-.due { background: var(--card); border-radius: 22px; box-shadow: var(--lift); padding: 26px 28px 10px; }
+.due { container-type: inline-size; background: var(--card); border-radius: 22px; box-shadow: var(--lift); padding: 26px 28px 10px; }
 .due-next { border-left: 4px solid var(--due); padding: 2px 0 4px 18px; }
 .due-tag { color: var(--due); font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
 .due-tag::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--due); animation: blink 1s steps(2) infinite; }
 .due-course { font-size: 13px; color: var(--ink-2); margin-top: 8px; }
 .due-title { font: 700 22px/1.25 var(--display); margin: 4px 0 10px; letter-spacing: -.01em; }
-.clock { font: 800 clamp(26px, 7.4vw, 58px)/1 var(--display); color: var(--due); letter-spacing: -.02em; font-variant-numeric: tabular-nums; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px; }
+.clock { font: 800 clamp(22px, 10cqi, 58px)/1 var(--display); color: var(--due); letter-spacing: -.02em; font-variant-numeric: tabular-nums; display: flex; flex-wrap: nowrap; white-space: nowrap; align-items: baseline; gap: 4px; }
 .clock small { font: 600 14px var(--display); color: var(--due); opacity: .75; margin-right: 8px; }
 .list { list-style: none; margin: 18px 0 0; padding: 0; }
 .list li { display: grid; grid-template-columns: 10px 1fr auto; gap: 4px 12px; align-items: baseline; padding: 13px 0; border-top: 1px solid var(--line); }
