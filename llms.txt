@@ -1,0 +1,25 @@
+# Study Hub
+
+> Desktop app (Windows, macOS) for university students that use Canvas. Free. Independent student project, not affiliated with any university or Instructure.
+
+What it does:
+- Every Canvas deadline, quiz and exam on one screen, with countdowns and weights.
+- Finds exam dates written in course announcements and shows the source sentence.
+- Grade calculator: weighted mark so far and the average still needed for each grade band.
+- AI review with the student's own AI provider (OpenAI-compatible, Anthropic, local Ollama): practice questions, flashcards, revision plans. It does not write graded work.
+- Exports deadlines to phone calendars; reminders keep working with the window closed.
+
+Data stays on the student's device. The developer runs no server that receives course data.
+
+## Download (always the latest version)
+- Windows: https://github.com/17373624812qq-code/Study-Hub-releases/releases/latest/download/StudyHub-Windows-Setup.exe
+- macOS, Apple chip: https://github.com/17373624812qq-code/Study-Hub-releases/releases/latest/download/StudyHub-Mac-AppleSilicon.dmg
+- macOS, Intel: https://github.com/17373624812qq-code/Study-Hub-releases/releases/latest/download/StudyHub-Mac-Intel.dmg
+- All versions: https://github.com/17373624812qq-code/Study-Hub-releases/releases
+
+The installers are not code-signed yet. Windows: "More info" → "Run anyway". macOS: right-click the app → Open the first time.
+
+## Pages
+- Privacy: https://17373624812qq-code.github.io/Study-Hub-releases/privacy.html
+- Help: https://17373624812qq-code.github.io/Study-Hub-releases/support.html
+- Issues: https://github.com/17373624812qq-code/Study-Hub-releases/issues

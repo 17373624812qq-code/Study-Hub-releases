@@ -4,27 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Study Hub · 帮助与支持 Support</title>
-<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-<style>
-  :root { --bg:#f6f5f1; --surface:#fff; --ink:#171a22; --ink-2:#545a69; --line:rgba(20,24,35,.1); --accent:#3048d6; color-scheme: light; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#0d0e12; --surface:#15171c; --ink:#eceef3; --ink-2:#a3a8b5; --line:rgba(255,255,255,.09); --accent:#8e9cff; color-scheme: dark; } }
-  * { box-sizing: border-box; }
-  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.65 "Segoe UI Variable Text","Segoe UI",-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei UI",system-ui,sans-serif; padding: max(24px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) 48px max(16px, env(safe-area-inset-left)); }
-  main { max-width: 720px; margin: 0 auto; }
-  h1 { font-size: 26px; line-height:1.25; margin: 0 0 6px; letter-spacing:-.01em; }
-  h2 { font-size: 16px; margin: 0 0 4px; }
-  p { color: var(--ink-2); margin: 0; }
-  strong { color: var(--ink); }
-  .contact { margin: 18px 0; padding: 16px 20px; border-radius: 16px; background: var(--surface); border:1px solid var(--line); }
-  .contact code { font-size: 15px; user-select: all; color: var(--ink); }
-  details { background: var(--surface); border:1px solid var(--line); border-radius: 14px; padding: 12px 18px; margin-top: 10px; }
-  summary { cursor: pointer; font-weight: 600; color: var(--ink); }
-  details p { margin-top: 8px; }
-  a { color: var(--accent); }
-  .back { display:inline-block; margin-top: 28px; font-size: 14px; }
-</style>
+<link rel="icon" href="img/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="doc">
 <main>
   <h1>帮助与支持 · Support</h1>
   <p>Study Hub 是一个截止日期优先的学习助手：把 Canvas 里的作业、考试、课程要求和课程邮件集中到一个页面。</p>
@@ -35,7 +18,9 @@
     <p>通常在 2 个工作日内回复。请不要在邮件里发送你的 Canvas 令牌、密码或课程资料。<br>We usually reply within 2 business days. Please never send tokens, passwords or course files.</p>
   </div>
 
-  <details open><summary>不连接 Canvas 能先试用吗？ · Can I try it without Canvas?</summary>
+  <details open><summary>安装时被系统拦住怎么办？ · The installer is blocked</summary>
+    <p>内测版还没有代码签名。Windows：出现蓝色提示时点「更多信息」→「仍要运行」。Mac：把 Study Hub 拖进「应用程序」后，第一次右键 App →「打开」；如果还被拦，去「系统设置 → 隐私与安全性」点「仍要打开」。<br>The beta isn't code-signed yet. Windows: “More info” → “Run anyway”. Mac: after dragging Study Hub into Applications, right-click the app → Open the first time; if it is still blocked, open System Settings → Privacy &amp; Security and click “Open Anyway”.</p></details>
+  <details><summary>不连接 Canvas 能先试用吗？ · Can I try it without Canvas?</summary>
     <p>可以。首次打开时点「先看看演示（示例数据）」，就能用虚构的课程体验全部功能，完全离线。<br>Yes. On first launch tap “先看看演示（示例数据）” (Try the demo) to explore every screen with fictional courses, fully offline.</p></details>
   <details><summary>怎么连接我的 Canvas？ · How do I connect Canvas?</summary>
     <p>在连接界面填写学校的 Canvas 网址并登录。如果你的学校还没有开通 Study Hub 的 Canvas 登录，可以在 Canvas「账户 → 设置」里生成个人访问令牌（Access Token）后粘贴。令牌只保存在你设备的钥匙串里。<br>Enter your institution's Canvas address and sign in. If sign-in is not enabled for your institution yet, create a personal access token in Canvas (Account → Settings) and paste it. The token stays in your device keychain.</p></details>

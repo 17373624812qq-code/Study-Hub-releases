@@ -1,0 +1,71 @@
+/* One stylesheet for every page of the site. */
+:root {
+  --bg: #fbfbfa; --ink: #18181b; --ink-2: #6b6b73; --line: rgba(24, 24, 27, .09);
+  --accent: #4f46e5; --on-accent: #fff; --shot: 0 1px 2px rgba(0,0,0,.04), 0 12px 40px rgba(24,24,27,.10);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0e0e10; --ink: #ededef; --ink-2: #8e8e96; --line: rgba(255,255,255,.08);
+    --accent: #8b87ff; --on-accent: #0e0e10; --shot: 0 0 0 1px rgba(255,255,255,.06), 0 16px 48px rgba(0,0,0,.5); color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI Variable Text", "Segoe UI", "PingFang SC", "Microsoft YaHei UI", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+img { display: block; max-width: 100%; height: auto; }
+
+/* Language: both languages are in the HTML; the root lang picks one. */
+html[lang^="zh"] body:not(.doc) [lang="en"], html[lang="en"] body:not(.doc) [lang^="zh"] { display: none !important; }
+
+.wrap { width: min(1080px, 100% - 32px); margin: 0 auto; }
+.bar { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 600; text-decoration: none; }
+.brand img { width: 26px; height: 26px; border-radius: 7px; }
+.link { background: none; border: 0; padding: 6px 2px; font: inherit; color: var(--ink-2); cursor: pointer; text-decoration: none; }
+.link:hover { color: var(--ink); }
+
+.hero { text-align: center; padding: 72px 0 40px; }
+h1 { font-size: clamp(40px, 7vw, 64px); line-height: 1.05; letter-spacing: -.03em; margin: 0; font-weight: 700; }
+.hero p { font-size: clamp(17px, 2.2vw, 20px); color: var(--ink-2); margin: 16px auto 0; max-width: 32em; }
+
+.get { margin-top: 32px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 28px; border-radius: 999px;
+  background: var(--accent); color: var(--on-accent); font-weight: 600; text-decoration: none; }
+.button:hover { filter: brightness(1.08); }
+.button:focus-visible, .link:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.others { display: flex; gap: 18px; font-size: 15px; }
+.others a { color: var(--ink-2); text-decoration: none; }
+.others a:hover { color: var(--ink); }
+
+/* After a download starts, the steps replace the buttons. */
+.steps { display: none; margin: 32px auto 0; padding: 0; list-style: none; counter-reset: s; width: min(420px, 100%); text-align: left; }
+.steps li { counter-increment: s; display: flex; gap: 14px; padding: 12px 0; border-top: 1px solid var(--line); }
+.steps li:first-child { border-top: 0; }
+.steps li::before { content: counter(s); flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--line); display: grid; place-items: center; font-size: 13px; font-weight: 600; }
+body[data-started="mac"] .get, body[data-started="win"] .get { display: none; }
+body[data-started="mac"] .steps.mac, body[data-started="win"] .steps.win { display: block; }
+
+.shot { border-radius: 14px; box-shadow: var(--shot); background: #fff; }
+.hero .shot { margin: 56px auto 0; }
+.feature { padding: 72px 0 0; }
+.feature h2 { font-size: clamp(24px, 3.4vw, 32px); letter-spacing: -.02em; margin: 0 0 24px; text-align: center; font-weight: 650; }
+
+.foot { margin-top: 96px; padding: 28px 0 40px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 14px; color: var(--ink-2); }
+.foot a { text-decoration: none; }
+.foot a:hover { color: var(--ink); }
+.foot small { flex-basis: 100%; font-size: 13px; }
+
+/* Text pages (privacy, support) */
+.doc main { width: min(680px, 100% - 32px); margin: 40px auto 64px; }
+.doc h1 { font-size: 32px; letter-spacing: -.02em; margin-bottom: 8px; }
+.doc h2 { font-size: 18px; margin: 32px 0 6px; }
+.doc p, .doc li { color: var(--ink-2); }
+.doc strong { color: var(--ink); }
+.doc .meta { font-size: 14px; }
+.doc details { border-top: 1px solid var(--line); padding: 14px 0; }
+.doc summary { cursor: pointer; font-weight: 600; color: var(--ink); }
+.doc .contact { margin: 24px 0; }
+.doc .back { display: inline-block; margin-top: 32px; color: var(--accent); text-decoration: none; }
+.doc .lang { color: var(--ink-2); }

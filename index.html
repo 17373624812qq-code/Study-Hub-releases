@@ -1,139 +1,126 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Study Hub — every deadline from Canvas in one place</title>
-  <meta name="description" content="Study Hub pulls assessments, exam dates and hurdle requirements out of Canvas into one timeline, with reminders, a grade calculator and calendar sync. Your data stays on your device.">
-  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
-  <style>
-    :root {
-      --bg: #fafafb; --surface: #fff; --ink: #17171c; --ink-2: #4e4e5a; --ink-3: #6d6d79; --line: rgba(20,20,35,.08);
-      --accent: #4f46e5; --accent-soft: rgba(79,70,229,.08); --radius: 18px;
-      --font: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Microsoft YaHei UI", system-ui, sans-serif;
-      color-scheme: light;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) { --bg: #111113; --surface: #19191c; --ink: #f1f1f4; --ink-2: #b2b2bc; --ink-3: #8e8e99; --line: rgba(255,255,255,.08); --accent: #8b8cf8; --accent-soft: rgba(139,140,248,.13); color-scheme: dark; }
-    }
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: var(--font); background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-    a { color: var(--accent); }
-    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
-    header.top { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
-    .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 17px; text-decoration: none; color: var(--ink); }
-    .brand img { width: 32px; height: 32px; border-radius: 9px; }
-    .lang { display: inline-flex; padding: 2px; border-radius: 9px; background: var(--accent-soft); }
-    .lang button { border: 0; background: transparent; color: var(--ink-2); font: inherit; font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 7px; cursor: pointer; }
-    .lang button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px rgba(0,0,0,.08); }
-    .hero { padding: 56px 0 28px; text-align: center; }
-    .hero h1 { font-size: clamp(32px, 6vw, 54px); line-height: 1.12; letter-spacing: -.025em; margin: 0 auto 16px; max-width: 16ch; }
-    .hero p { font-size: clamp(16px, 2.2vw, 19px); color: var(--ink-2); max-width: 46ch; margin: 0 auto 28px; }
-    .cta { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-    .btn { display: inline-flex; align-items: center; gap: 8px; height: 46px; padding: 0 22px; border-radius: 12px; font-weight: 650; text-decoration: none; font-size: 15px; }
-    .btn.primary { background: var(--accent); color: #fff; }
-    .btn.soft { background: var(--surface); color: var(--ink); border: 1px solid var(--line); }
-    .note { font-size: 13px; color: var(--ink-3); margin-top: 12px; }
-    .shot { margin: 40px auto 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: 0 30px 80px -30px rgba(20,20,40,.35); max-width: 1000px; }
-    .shot img { display: block; width: 100%; height: auto; }
-    section { padding: 64px 0 8px; }
-    h2 { font-size: clamp(24px, 3.4vw, 32px); letter-spacing: -.015em; margin: 0 0 8px; }
-    .lead { color: var(--ink-2); margin: 0 0 28px; max-width: 60ch; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
-    .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
-    .card h3 { margin: 0 0 6px; font-size: 16.5px; }
-    .card p { margin: 0; color: var(--ink-2); font-size: 14.5px; }
-    .icon { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font-size: 18px; margin-bottom: 12px; }
-    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .pair figure { margin: 0; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); }
-    .pair img { display: block; width: 100%; height: auto; }
-    details { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 18px; margin-bottom: 10px; }
-    summary { cursor: pointer; font-weight: 650; }
-    details p { color: var(--ink-2); margin: 10px 0 0; }
-    footer { padding: 48px 0 40px; color: var(--ink-3); font-size: 13.5px; display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; }
-    html:not([lang="zh-CN"]) [data-l="zh"], html[lang="zh-CN"] [data-l="en"] { display: none !important; }
-    @media (max-width: 720px) { .pair { grid-template-columns: 1fr; } .hero { padding-top: 32px; } }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Study Hub</title>
+<meta name="description" content="Study Hub：Canvas 的截止日期、成绩和复习，放在一个 App 里。Windows / Mac 免费下载。 · Canvas deadlines, grades and revision in one app. Free for Windows and Mac.">
+<meta property="og:title" content="Study Hub">
+<meta property="og:description" content="Canvas deadlines, grades and revision in one app.">
+<meta property="og:image" content="https://17373624812qq-code.github.io/Study-Hub-releases/img/home-zh.jpg">
+<link rel="icon" href="img/icon.svg" type="image/svg+xml">
+<link rel="alternate" type="text/plain" href="llms.txt" title="Plain-text summary for agents">
+<link rel="stylesheet" href="style.css">
+<script>
+  // Pick the language before first paint: saved choice, else the browser's.
+  try { document.documentElement.lang = localStorage.getItem("lang") || (/^zh/i.test(navigator.language) ? "zh-CN" : "en"); } catch (_) {}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Study Hub",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Windows 10+, macOS 11+",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "AUD" },
+  "description": "Canvas companion: deadlines, exam dates from announcements, a grade calculator and AI review with your own AI.",
+  "downloadUrl": [
+    "https://github.com/17373624812qq-code/Study-Hub-releases/releases/latest/download/StudyHub-Windows-Setup.exe",
+    "https://github.com/17373624812qq-code/Study-Hub-releases/releases/latest/download/StudyHub-Mac-AppleSilicon.dmg",
+    "https://github.com/17373624812qq-code/Study-Hub-releases/releases/latest/download/StudyHub-Mac-Intel.dmg"
+  ]
+}
+</script>
 </head>
 <body>
-  <div class="wrap">
-    <header class="top">
-      <a class="brand" href="#"><img src="img/icon.svg" alt="">Study Hub</a>
-      <div class="lang" role="group" aria-label="Language"><button type="button" data-set="en" aria-pressed="true">English</button><button type="button" data-set="zh" aria-pressed="false">中文</button></div>
-    </header>
+<header class="wrap bar">
+  <a class="brand" href="./"><img src="img/icon.svg" alt="">Study Hub</a>
+  <button class="link" type="button" data-lang-toggle><span lang="zh-CN">English</span><span lang="en">中文</span></button>
+</header>
 
-    <div class="hero">
-      <h1><span data-l="en">Every deadline from Canvas, in one place.</span><span data-l="zh">Canvas 上的所有截止日期，一处看清。</span></h1>
-      <p><span data-l="en">Study Hub pulls assessments, exam dates and hurdle requirements out of all your courses into one timeline — with reminders, a grade calculator and calendar sync.</span><span data-l="zh">Study Hub 把每门课的作业、考试日期和及格要求整理成一条时间线，还有截止提醒、成绩计算和日历同步。</span></p>
-      <div class="cta">
-        <a class="btn primary" href="#download"><span data-l="en">Download for free</span><span data-l="zh">免费下载</span></a>
-        <a class="btn soft" href="#features"><span data-l="en">See what it does</span><span data-l="zh">看看能做什么</span></a>
-      </div>
-      <p class="note"><span data-l="en">Windows · macOS · iPhone (coming soon). Made by a student, for students.</span><span data-l="zh">Windows · macOS · iPhone（即将上线）。学生做给学生用的。</span></p>
-      <div class="shot"><img data-l="en" src="img/home-en.jpg" alt="Study Hub home screen: the next deadline with a countdown and a list of what's due" width="1280" height="860"><img data-l="zh" src="img/home-zh.jpg" alt="Study Hub 首页：最近截止事项和倒计时" width="1280" height="860"></div>
+<main class="wrap">
+  <section class="hero">
+    <h1>Study Hub</h1>
+    <p><span lang="zh-CN">Canvas 的截止日期、成绩和复习，放在一个 App 里。</span><span lang="en">Canvas deadlines, grades and revision in one app.</span></p>
+
+    <div class="get" id="download">
+      <a class="button" data-os="mac" href="https://github.com/17373624812qq-code/Study-Hub-releases/releases/latest/download/StudyHub-Mac-AppleSilicon.dmg"><span lang="zh-CN">下载 Mac 版</span><span lang="en">Download for Mac</span></a>
+      <nav class="others">
+        <a data-os="win" href="https://github.com/17373624812qq-code/Study-Hub-releases/releases/latest/download/StudyHub-Windows-Setup.exe">Windows</a>
+        <a data-os="mac" href="https://github.com/17373624812qq-code/Study-Hub-releases/releases/latest/download/StudyHub-Mac-Intel.dmg">Mac Intel</a>
+        <a href="https://github.com/17373624812qq-code/Study-Hub-releases/releases"><span lang="zh-CN">所有版本</span><span lang="en">All versions</span></a>
+      </nav>
     </div>
 
-    <section id="features">
-      <h2><span data-l="en">Stop digging through Canvas pages</span><span data-l="zh">不用再一页页翻 Canvas</span></h2>
-      <p class="lead"><span data-l="en">Everything that decides your grade, gathered from assignments, announcements, calendars and outlines.</span><span data-l="zh">影响成绩的信息，从作业、公告、日历和课程大纲里集中起来。</span></p>
-      <div class="grid">
-        <div class="card"><div class="icon">⏱</div><h3><span data-l="en">One timeline</span><span data-l="zh">一条时间线</span></h3><p><span data-l="en">All courses' due dates in order, with a live countdown to the next one.</span><span data-l="zh">所有课程的截止日期按时间排好，最近一项有实时倒计时。</span></p></div>
-        <div class="card"><div class="icon">📣</div><h3><span data-l="en">Exam dates from announcements</span><span data-l="zh">从公告里找出考试日期</span></h3><p><span data-l="en">Exam times buried in announcements are detected, shown with the original sentence, and easy to confirm or correct.</span><span data-l="zh">藏在公告里的考试时间会被识别出来，附上原文那句话，一点就能确认或修改。</span></p></div>
-        <div class="card"><div class="icon">🎯</div><h3><span data-l="en">Grade calculator</span><span data-l="zh">成绩计算器</span></h3><p><span data-l="en">See your weighted mark so far and what you need on the rest for a P, CR, D or HD.</span><span data-l="zh">算出当前加权成绩，以及剩下的考核要拿多少才能 P、CR、D、HD。</span></p></div>
-        <div class="card"><div class="icon">⚠️</div><h3><span data-l="en">Hurdles you can't miss</span><span data-l="zh">不会漏掉的 hurdle</span></h3><p><span data-l="en">Minimum-mark, attendance and compulsory-task rules, each linked to its source.</span><span data-l="zh">最低分、出勤和必做任务等要求，每条都附原文来源。</span></p></div>
-        <div class="card"><div class="icon">🔔</div><h3><span data-l="en">Reminders that arrive</span><span data-l="zh">准时的提醒</span></h3><p><span data-l="en">A day and two hours before each deadline, three days before exams — even with the window closed.</span><span data-l="zh">截止前一天和两小时、考试前三天提醒，关掉窗口也照样提醒。</span></p></div>
-        <div class="card"><div class="icon">📅</div><h3><span data-l="en">Your calendar and timetable</span><span data-l="zh">日历和课表</span></h3><p><span data-l="en">Export deadlines to Apple, Google or Outlook calendar, and import your class timetable.</span><span data-l="zh">截止日期导出到 Apple、Google 或 Outlook 日历，也能导入你的课表。</span></p></div>
-        <div class="card"><div class="icon">✨</div><h3><span data-l="en">Revise with your own AI</span><span data-l="zh">用你自己的 AI 复习</span></h3><p><span data-l="en">Connect OpenAI, Claude, DeepSeek, Gemini, Qwen or a local Ollama. It reads your course content and lecture PDFs to explain, quiz you and make flashcards — and won't write work you hand in.</span><span data-l="zh">连接 OpenAI、Claude、DeepSeek、Gemini、通义千问或本机 Ollama。AI 读取你的课程内容和课件 PDF，帮你讲解、出题、做闪卡，但不会替你写要交的作业。</span></p></div>
-      </div>
-      <div class="pair" style="margin-top:14px">
-        <figure><img src="img/grades-zh.jpg" alt="Grade calculator" width="1280" height="860" loading="lazy"></figure>
-        <figure><img src="img/calendar-en.jpg" alt="Calendar with deadlines and classes" width="1280" height="860" loading="lazy"></figure>
-      </div>
-    </section>
+    <ol class="steps mac" aria-live="polite">
+      <li><span lang="zh-CN">打开下载的 .dmg，把 Study Hub 拖进「应用程序」</span><span lang="en">Open the .dmg and drag Study Hub into Applications</span></li>
+      <li><span lang="zh-CN">第一次打开：右键 Study Hub →「打开」</span><span lang="en">First launch: right-click Study Hub → Open</span></li>
+      <li><span lang="zh-CN">没有 Canvas 账号也能先试「演示」</span><span lang="en">No Canvas account? Try the demo</span></li>
+    </ol>
+    <ol class="steps win" aria-live="polite">
+      <li><span lang="zh-CN">打开 StudyHub-Windows-Setup.exe</span><span lang="en">Open StudyHub-Windows-Setup.exe</span></li>
+      <li><span lang="zh-CN">出现蓝色提示时：「更多信息」→「仍要运行」</span><span lang="en">If a blue warning appears: More info → Run anyway</span></li>
+      <li><span lang="zh-CN">没有 Canvas 账号也能先试「演示」</span><span lang="en">No Canvas account? Try the demo</span></li>
+    </ol>
 
-    <section id="privacy">
-      <h2><span data-l="en">Your data stays on your device</span><span data-l="zh">数据只在你的设备上</span></h2>
-      <p class="lead"><span data-l="en">Study Hub talks to Canvas directly from your computer or phone. Your courses, marks and notes are never uploaded to a Study Hub server, and your Canvas token is kept in the system keychain. No ads, no tracking.</span><span data-l="zh">Study Hub 直接从你的电脑或手机连接 Canvas。课程、成绩和笔记不会上传到任何 Study Hub 服务器，Canvas 令牌保存在系统钥匙串里。没有广告，没有追踪。</span></p>
-    </section>
+    <img class="shot" src="img/home-zh.jpg" data-en="img/home-en.jpg" width="1280" height="800" alt="Study Hub: upcoming deadlines with a countdown">
+  </section>
 
-    <section id="download">
-      <h2><span data-l="en">Download</span><span data-l="zh">下载</span></h2>
-      <p class="lead"><span data-l="en">Free while in beta. You'll need your school's Canvas address and a Canvas access token — the app walks you through it in three steps.</span><span data-l="zh">内测期间免费。需要学校的 Canvas 网址和一个 Canvas 访问令牌，app 里有三步引导。</span></p>
-      <div class="cta" style="justify-content:flex-start">
-        <a class="btn primary" href="https://github.com/17373624812qq-code/Study-Hub-releases/releases/latest/download/StudyHub-Windows-Setup.exe">Windows</a>
-        <a class="btn primary" href="https://github.com/17373624812qq-code/Study-Hub-releases/releases/latest/download/StudyHub-Mac-AppleSilicon.dmg">macOS <span data-l="en">(Apple chip, M1–M5)</span><span data-l="zh">（M 系列芯片）</span></a>
-        <a class="btn soft" href="https://github.com/17373624812qq-code/Study-Hub-releases/releases/latest/download/StudyHub-Mac-Intel.dmg">macOS <span data-l="en">(Intel)</span><span data-l="zh">（Intel 芯片）</span></a>
-      </div>
-      <p class="lead" style="font-size:15px;margin-top:18px"><span data-l="en">Not sure which Mac you have? Apple menu → About This Mac: “Chip: Apple M…” means Apple chip. Older versions and release notes: <a href="https://github.com/17373624812qq-code/Study-Hub-releases/releases">all releases</a>.</span><span data-l="zh">不确定 Mac 是哪种芯片？点左上角苹果图标 →「关于本机」，写着「芯片 Apple M…」就选 M 系列。历史版本和更新说明见 <a href="https://github.com/17373624812qq-code/Study-Hub-releases/releases">全部版本</a>。</span></p>
-      <details style="margin-top:14px"><summary><span data-l="en">Installing: “unknown developer” warnings</span><span data-l="zh">安装时提示「无法验证开发者」怎么办？</span></summary>
-        <p><span data-l="en">The beta isn't code-signed yet, so your computer asks before opening it. <b>Windows:</b> if SmartScreen appears, click “More info” → “Run anyway”. <b>Mac:</b> open the .dmg, drag Study Hub into Applications, then right-click the app → Open → Open. If macOS still blocks it, go to System Settings → Privacy &amp; Security and click “Open Anyway”.</span><span data-l="zh">内测版还没有做代码签名，所以第一次打开时系统会确认一下。<b>Windows：</b>弹出 SmartScreen 时点「更多信息」→「仍要运行」。<b>Mac：</b>打开 .dmg，把 Study Hub 拖进「应用程序」，然后右键 App →「打开」→「打开」。如果还是被拦，去「系统设置 → 隐私与安全性」点「仍要打开」。</span></p></details>
-    </section>
+  <section class="feature">
+    <h2><span lang="zh-CN">成绩</span><span lang="en">Grades</span></h2>
+    <img class="shot" src="img/grades-zh.jpg" data-en="img/grades-en.jpg" width="1280" height="800" loading="lazy" alt="Grade calculator: weighted mark and the average needed for each grade band">
+  </section>
 
-    <section id="faq">
-      <h2>FAQ</h2>
-      <details><summary><span data-l="en">Is this made by my university?</span><span data-l="zh">这是学校官方做的吗？</span></summary><p><span data-l="en">No. Study Hub is an independent student project and isn't affiliated with or endorsed by any university or Instructure (Canvas). Always check the official notice for exam details.</span><span data-l="zh">不是。Study Hub 是独立的学生项目，与任何大学和 Instructure（Canvas）都没有隶属或背书关系。考试信息请以官方通知为准。</span></p></details>
-      <details><summary><span data-l="en">Why do I need to reconnect every 30 days?</span><span data-l="zh">为什么每 30 天要重新连接？</span></summary><p><span data-l="en">Many schools make student Canvas tokens expire after 30 days. Study Hub reminds you a few days before so syncing doesn't stop.</span><span data-l="zh">很多学校规定学生的 Canvas 令牌 30 天过期。Study Hub 会提前几天提醒你更换，同步不会中断。</span></p></details>
-      <details><summary><span data-l="en">What if the app reads a date wrong?</span><span data-l="zh">识别的日期错了怎么办？</span></summary><p><span data-l="en">Open the item and correct it — your fix stays on your device. Use “Send feedback” in Settings so we can improve detection.</span><span data-l="zh">点开那一项直接改，改动保存在你的设备上。也欢迎在设置里点「反馈问题」，帮我们改进识别。</span></p></details>
-      <details><summary><span data-l="en">Is the AI included? Is it allowed?</span><span data-l="zh">AI 要钱吗？学校允许用吗？</span></summary><p><span data-l="en">You connect your own AI account and the provider bills you directly (or run Ollama free on your computer). Chat subscriptions like ChatGPT Plus don't include API access. The assistant explains, quizzes and plans but won't write work you submit; each unit sets its own rules on AI use, so check your unit outline.</span><span data-l="zh">AI 用的是你自己的账户，费用由服务商直接收取（也可以在自己电脑上免费运行 Ollama）。ChatGPT Plus 这类聊天订阅不包含 API。助手负责讲解、出题和排计划，不会替你写要提交的作业；每门课对 AI 的规定不同，请以 unit outline 为准。</span></p></details>
-    </section>
+  <section class="feature">
+    <h2><span lang="zh-CN">AI 复习</span><span lang="en">AI review</span></h2>
+    <img class="shot" src="img/ai-zh.jpg" data-en="img/ai-en.jpg" width="1280" height="800" loading="lazy" alt="AI review: practice questions and flashcards from course material">
+  </section>
 
-    <footer>
-      <span>© 2026 Study Hub</span>
-      <span><a href="privacy.html" data-l="en">Privacy</a><a href="privacy.html" data-l="zh">隐私政策</a> · <a href="support.html" data-l="en">Support</a><a href="support.html" data-l="zh">帮助与支持</a></span>
-    </footer>
-  </div>
-  <script>
-    (function () {
-      var saved = null; try { saved = localStorage.getItem("studyhub.site.lang"); } catch (e) {}
-      var lang = saved || (/^zh/i.test(navigator.language || "") ? "zh" : "en");
-      function apply(l) {
-        document.documentElement.lang = l === "zh" ? "zh-CN" : "en";
-        document.querySelectorAll("[data-set]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.set === l)); });
-        try { localStorage.setItem("studyhub.site.lang", l); } catch (e) {}
-      }
-      apply(lang);
-      document.querySelectorAll("[data-set]").forEach(function (b) { b.addEventListener("click", function () { apply(b.dataset.set); }); });
-    })();
-  </script>
+  <section class="feature">
+    <h2><span lang="zh-CN">日历</span><span lang="en">Calendar</span></h2>
+    <img class="shot" src="img/calendar-zh.jpg" data-en="img/calendar-en.jpg" width="1280" height="800" loading="lazy" alt="Calendar of assessments and exams, exportable to phone calendars">
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <a href="privacy.html"><span lang="zh-CN">隐私</span><span lang="en">Privacy</span></a>
+  <a href="support.html"><span lang="zh-CN">帮助</span><span lang="en">Help</span></a>
+  <a href="https://github.com/17373624812qq-code/Study-Hub-releases">GitHub</a>
+  <small><span lang="zh-CN">独立学生项目，与任何大学或 Instructure（Canvas）无关。</span><span lang="en">An independent student project, not affiliated with any university or Instructure (Canvas).</span></small>
+</footer>
+
+<script>
+(() => {
+  const root = document.documentElement;
+  const apply = () => {
+    const en = root.lang === "en";
+    for (const img of document.querySelectorAll("img[data-en]")) {
+      img.dataset.zh ||= img.getAttribute("src");
+      img.src = en ? img.dataset.en : img.dataset.zh;
+    }
+  };
+  document.querySelector("[data-lang-toggle]").addEventListener("click", () => {
+    root.lang = root.lang === "en" ? "zh-CN" : "en";
+    try { localStorage.setItem("lang", root.lang); } catch (_) {}
+    apply();
+  });
+  apply();
+
+  // Lead with the visitor's platform; Windows visitors get Windows first.
+  const ua = navigator.userAgentData?.platform || navigator.platform || navigator.userAgent;
+  if (/win/i.test(ua)) {
+    const primary = document.querySelector(".button");
+    const win = document.querySelector('.others [data-os="win"]');
+    [primary.href, win.href] = [win.href, primary.href];
+    primary.dataset.os = "win"; win.dataset.os = "mac";
+    primary.innerHTML = '<span lang="zh-CN">下载 Windows 版</span><span lang="en">Download for Windows</span>';
+    win.textContent = "Mac";
+  }
+  // Once a download starts, show how to open it instead of the buttons.
+  for (const a of document.querySelectorAll("a[data-os]")) {
+    a.addEventListener("click", () => { document.body.dataset.started = a.dataset.os; });
+  }
+})();
+</script>
 </body>
 </html>
